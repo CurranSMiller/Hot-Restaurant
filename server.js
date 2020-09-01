@@ -8,10 +8,27 @@ const PORT = 7050;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+
+//  Routes
+
 app.get('/', (req, res) => {
-  res.send("App listening on port " + PORT);
-})
+  res.send("main page");
+   // res.sendFile(path.join(__dirname, "main.html"));
+});
+
+app.get("/reservations", function(req, res) {
+  res.send('reservations');
+  // res.sendFile(path.join(__dirname, "reservations.html"));
+});
+
+app.get("/tables", function(req, res) {
+  res.send('tables');
+  // res.sendFile(path.join(__dirname, "reservations.html"));
+});
 
 app.listen(PORT, () => {
-  console.log("App listening on port " + PORT);
-});
+  console.log('App listening on port ' + PORT);
+})
+
+
+
