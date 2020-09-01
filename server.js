@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('server works');
+  res.send("App listening on port " + PORT);
 })
 
 app.listen(PORT, () => {
