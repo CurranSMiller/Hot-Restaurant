@@ -21,7 +21,7 @@ app.get('/tables', (req, res) => {
 });
 
 app.get('/api/tables', (req, res) => {
-  return res.json(tables);
+  // return res.json(tables);
 });
 
 app.get('/reservations', (req, res) => {
@@ -30,7 +30,7 @@ app.get('/reservations', (req, res) => {
 });
 
 app.get('/api/reservations', (req, res) => {
-  return res.json(reservations);
+  // return res.json(reservations);
 });
 
 
