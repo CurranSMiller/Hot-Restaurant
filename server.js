@@ -11,21 +11,27 @@ app.use(express.json());
 //  Routes
 
 app.get('/', (req, res) => {
-  // res.sendFile(path.join(__dirname, "main.html"));
-  res.send('main page');
+  res.sendFile(path.join(__dirname, "main.html"));
+  // res.send('main page');
 });
 
 app.get('/tables', (req, res) => {
-  // res.sendFile(path.join(__dirname, "tables.html"));
-  res.send('tables');
+  res.sendFile(path.join(__dirname, "tables.html"));
+  // res.send('tables');
+});
+
+app.get('/api/tables', (req, res) => {
+  return res.json(tables);
 });
 
 app.get('/reservations', (req, res) => {
-  // res.sendFile(path.join(__dirname, "reservations.html"));
-  res.send('reservations');
+  res.sendFile(path.join(__dirname, "reservations.html"));
+  // res.send('reservations');
 });
 
-
+app.get('/api/reservations', (req, res) => {
+  return res.json(reservations);
+});
 
 
 
