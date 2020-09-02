@@ -15,7 +15,12 @@ app.get('/', (req, res) => {
   // res.send('main page');
 });
 
-app.get('/tables', (req, res) => {
+app.get('/main.html', (req, res) => {
+  res.sendFile(path.join(__dirname, "main.html"));
+  // res.send('main page');
+});
+
+app.get('/tables.html', (req, res) => {
   res.sendFile(path.join(__dirname, "tables.html"));
   // res.send('tables');
 });
@@ -24,7 +29,7 @@ app.get('/api/tables', (req, res) => {
   // return res.json(tables);
 });
 
-app.get('/reservations', (req, res) => {
+app.get('/reservations.html', (req, res) => {
   res.sendFile(path.join(__dirname, "reservations.html"));
   // res.send('reservations');
 });
